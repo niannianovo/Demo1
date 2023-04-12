@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.demo1.mapper.CourseMapper">
+    <select id="selectBySchoolname"
+            resultType="com.demo1.pojo.Course">
+        select * from c_course,s_school where
+        c_course.sid=s_school.id and schoolname=#{schoolname};
+    </select>
+
+</mapper>
